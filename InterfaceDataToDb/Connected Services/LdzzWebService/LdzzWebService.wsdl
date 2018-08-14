@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Ldzz_de">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_deResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ldzz_deResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_TjByXzqh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xzqhCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_TjByXzqhResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ldzz_TjByXzqhResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_TjByLdlx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xzqhCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_TjByLdlxResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ldzz_TjByLdlxResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_TjByZdgn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xzqhCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_TjByZdgnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ldzz_TjByZdgnResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_TaizhangCX">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_TaizhangCXResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ldzz_TaizhangCXResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_XmlbByXzqh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="xzqhCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="startTime" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endTime" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_XmlbByXzqhResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ldzz_XmlbByXzqhResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_SqbByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="applicationid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_SqbByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ldzz_SqbByCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_DjbByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="applicationid" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ldzz_DjbByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Ldzz_DjbByCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Ldzz_deSoapIn">
+    <wsdl:part name="parameters" element="tns:Ldzz_de" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_deSoapOut">
+    <wsdl:part name="parameters" element="tns:Ldzz_deResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_TjByXzqhSoapIn">
+    <wsdl:part name="parameters" element="tns:Ldzz_TjByXzqh" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_TjByXzqhSoapOut">
+    <wsdl:part name="parameters" element="tns:Ldzz_TjByXzqhResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_TjByLdlxSoapIn">
+    <wsdl:part name="parameters" element="tns:Ldzz_TjByLdlx" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_TjByLdlxSoapOut">
+    <wsdl:part name="parameters" element="tns:Ldzz_TjByLdlxResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_TjByZdgnSoapIn">
+    <wsdl:part name="parameters" element="tns:Ldzz_TjByZdgn" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_TjByZdgnSoapOut">
+    <wsdl:part name="parameters" element="tns:Ldzz_TjByZdgnResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_TaizhangCXSoapIn">
+    <wsdl:part name="parameters" element="tns:Ldzz_TaizhangCX" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_TaizhangCXSoapOut">
+    <wsdl:part name="parameters" element="tns:Ldzz_TaizhangCXResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_XmlbByXzqhSoapIn">
+    <wsdl:part name="parameters" element="tns:Ldzz_XmlbByXzqh" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_XmlbByXzqhSoapOut">
+    <wsdl:part name="parameters" element="tns:Ldzz_XmlbByXzqhResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_SqbByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Ldzz_SqbByCode" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_SqbByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Ldzz_SqbByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_DjbByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Ldzz_DjbByCode" />
+  </wsdl:message>
+  <wsdl:message name="Ldzz_DjbByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Ldzz_DjbByCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LdzzWebServiceSoap">
+    <wsdl:operation name="Ldzz_de">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">（根据年份，查询各级行政区（省、市、县）定额）year：年份</wsdl:documentation>
+      <wsdl:input message="tns:Ldzz_deSoapIn" />
+      <wsdl:output message="tns:Ldzz_deSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_TjByXzqh">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">（根据时间范围，统计各市或者县的汇总数据（个数、面积））xzqhCode：行政区划代码|startTime：起始时间|endTime：结束时间</wsdl:documentation>
+      <wsdl:input message="tns:Ldzz_TjByXzqhSoapIn" />
+      <wsdl:output message="tns:Ldzz_TjByXzqhSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_TjByLdlx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">（根据时间范围和行政区划，按照林地类型进行统计）xzqhCode：行政区划代码|startTime：起始时间|endTime：结束时间</wsdl:documentation>
+      <wsdl:input message="tns:Ldzz_TjByLdlxSoapIn" />
+      <wsdl:output message="tns:Ldzz_TjByLdlxSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_TjByZdgn">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">（根据时间范围和行政区划，按照主导功能进行统计）xzqhCode：行政区划代码|startTime：起始时间|endTime：结束时间</wsdl:documentation>
+      <wsdl:input message="tns:Ldzz_TjByZdgnSoapIn" />
+      <wsdl:output message="tns:Ldzz_TjByZdgnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_TaizhangCX">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">（根据年份，查询台账）year：年份</wsdl:documentation>
+      <wsdl:input message="tns:Ldzz_TaizhangCXSoapIn" />
+      <wsdl:output message="tns:Ldzz_TaizhangCXSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_XmlbByXzqh">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">（根据市、县查询项目列表信息）xzqhCode：行政区划代码|startTime：起始时间|endTime：结束时间</wsdl:documentation>
+      <wsdl:input message="tns:Ldzz_XmlbByXzqhSoapIn" />
+      <wsdl:output message="tns:Ldzz_XmlbByXzqhSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_SqbByCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">（根据项目编号查询使用林地申请表信息）applicationid：项目编号</wsdl:documentation>
+      <wsdl:input message="tns:Ldzz_SqbByCodeSoapIn" />
+      <wsdl:output message="tns:Ldzz_SqbByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_DjbByCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">（根据项目编号查询使用林地登记表信息）applicationid：项目编号</wsdl:documentation>
+      <wsdl:input message="tns:Ldzz_DjbByCodeSoapIn" />
+      <wsdl:output message="tns:Ldzz_DjbByCodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LdzzWebServiceSoap" type="tns:LdzzWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ldzz_de">
+      <soap:operation soapAction="http://tempuri.org/Ldzz_de" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_TjByXzqh">
+      <soap:operation soapAction="http://tempuri.org/Ldzz_TjByXzqh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_TjByLdlx">
+      <soap:operation soapAction="http://tempuri.org/Ldzz_TjByLdlx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_TjByZdgn">
+      <soap:operation soapAction="http://tempuri.org/Ldzz_TjByZdgn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_TaizhangCX">
+      <soap:operation soapAction="http://tempuri.org/Ldzz_TaizhangCX" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_XmlbByXzqh">
+      <soap:operation soapAction="http://tempuri.org/Ldzz_XmlbByXzqh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_SqbByCode">
+      <soap:operation soapAction="http://tempuri.org/Ldzz_SqbByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_DjbByCode">
+      <soap:operation soapAction="http://tempuri.org/Ldzz_DjbByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LdzzWebServiceSoap12" type="tns:LdzzWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Ldzz_de">
+      <soap12:operation soapAction="http://tempuri.org/Ldzz_de" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_TjByXzqh">
+      <soap12:operation soapAction="http://tempuri.org/Ldzz_TjByXzqh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_TjByLdlx">
+      <soap12:operation soapAction="http://tempuri.org/Ldzz_TjByLdlx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_TjByZdgn">
+      <soap12:operation soapAction="http://tempuri.org/Ldzz_TjByZdgn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_TaizhangCX">
+      <soap12:operation soapAction="http://tempuri.org/Ldzz_TaizhangCX" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_XmlbByXzqh">
+      <soap12:operation soapAction="http://tempuri.org/Ldzz_XmlbByXzqh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_SqbByCode">
+      <soap12:operation soapAction="http://tempuri.org/Ldzz_SqbByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ldzz_DjbByCode">
+      <soap12:operation soapAction="http://tempuri.org/Ldzz_DjbByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LdzzWebService">
+    <wsdl:port name="LdzzWebServiceSoap" binding="tns:LdzzWebServiceSoap">
+      <soap:address location="http://122.224.142.235/zzld/LdzzWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LdzzWebServiceSoap12" binding="tns:LdzzWebServiceSoap12">
+      <soap12:address location="http://122.224.142.235/zzld/LdzzWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

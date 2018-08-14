@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="YZL_PlainGreen">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YZL_PlainGreenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YZL_PlainGreenResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YZL_GetAfforest_Foster">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YZL_GetAfforest_FosterResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YZL_GetAfforest_FosterResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YZL_GetSBLH">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YZL_GetSBLHResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YZL_GetSBLHResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YZL_GetPlainG">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YZL_GetPlainGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YZL_GetPlainGResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YZL_GetZGTree">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YZL_GetZGTreeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YZL_GetZGTreeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YZL_GetAfforest_Majorproject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="YZL_GetAfforest_MajorprojectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="YZL_GetAfforest_MajorprojectResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlainGreenProChartReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlainGreenProChartReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlainGreenProChartReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfforest_FosterChartReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="townid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfforest_FosterChartReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAfforest_FosterChartReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSBLHReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetSBLHReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetSBLHReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlainGChartReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="codename" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlainGChartReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlainGChartReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZGTreeReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="province" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="county" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="typeTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetZGTreeReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetZGTreeReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfforest_MajorprojectChartReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfforest_MajorprojectChartReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAfforest_MajorprojectChartReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfforest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfforestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAfforestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfforestDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfforestDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAfforestDetailResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfforestCheckReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfforestCheckReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAfforestCheckReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfforestReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="codeid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="year" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAfforestReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAfforestReportResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="YZL_PlainGreenSoapIn">
+    <wsdl:part name="parameters" element="tns:YZL_PlainGreen" />
+  </wsdl:message>
+  <wsdl:message name="YZL_PlainGreenSoapOut">
+    <wsdl:part name="parameters" element="tns:YZL_PlainGreenResponse" />
+  </wsdl:message>
+  <wsdl:message name="YZL_GetAfforest_FosterSoapIn">
+    <wsdl:part name="parameters" element="tns:YZL_GetAfforest_Foster" />
+  </wsdl:message>
+  <wsdl:message name="YZL_GetAfforest_FosterSoapOut">
+    <wsdl:part name="parameters" element="tns:YZL_GetAfforest_FosterResponse" />
+  </wsdl:message>
+  <wsdl:message name="YZL_GetSBLHSoapIn">
+    <wsdl:part name="parameters" element="tns:YZL_GetSBLH" />
+  </wsdl:message>
+  <wsdl:message name="YZL_GetSBLHSoapOut">
+    <wsdl:part name="parameters" element="tns:YZL_GetSBLHResponse" />
+  </wsdl:message>
+  <wsdl:message name="YZL_GetPlainGSoapIn">
+    <wsdl:part name="parameters" element="tns:YZL_GetPlainG" />
+  </wsdl:message>
+  <wsdl:message name="YZL_GetPlainGSoapOut">
+    <wsdl:part name="parameters" element="tns:YZL_GetPlainGResponse" />
+  </wsdl:message>
+  <wsdl:message name="YZL_GetZGTreeSoapIn">
+    <wsdl:part name="parameters" element="tns:YZL_GetZGTree" />
+  </wsdl:message>
+  <wsdl:message name="YZL_GetZGTreeSoapOut">
+    <wsdl:part name="parameters" element="tns:YZL_GetZGTreeResponse" />
+  </wsdl:message>
+  <wsdl:message name="YZL_GetAfforest_MajorprojectSoapIn">
+    <wsdl:part name="parameters" element="tns:YZL_GetAfforest_Majorproject" />
+  </wsdl:message>
+  <wsdl:message name="YZL_GetAfforest_MajorprojectSoapOut">
+    <wsdl:part name="parameters" element="tns:YZL_GetAfforest_MajorprojectResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlainGreenProChartReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlainGreenProChartReport" />
+  </wsdl:message>
+  <wsdl:message name="GetPlainGreenProChartReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlainGreenProChartReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAfforest_FosterChartReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAfforest_FosterChartReport" />
+  </wsdl:message>
+  <wsdl:message name="GetAfforest_FosterChartReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAfforest_FosterChartReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetSBLHReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetSBLHReport" />
+  </wsdl:message>
+  <wsdl:message name="GetSBLHReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetSBLHReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlainGChartReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlainGChartReport" />
+  </wsdl:message>
+  <wsdl:message name="GetPlainGChartReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlainGChartReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetZGTreeReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetZGTreeReport" />
+  </wsdl:message>
+  <wsdl:message name="GetZGTreeReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetZGTreeReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAfforest_MajorprojectChartReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAfforest_MajorprojectChartReport" />
+  </wsdl:message>
+  <wsdl:message name="GetAfforest_MajorprojectChartReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAfforest_MajorprojectChartReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAfforestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAfforest" />
+  </wsdl:message>
+  <wsdl:message name="GetAfforestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAfforestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAfforestDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAfforestDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetAfforestDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAfforestDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAfforestCheckReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAfforestCheckReport" />
+  </wsdl:message>
+  <wsdl:message name="GetAfforestCheckReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAfforestCheckReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAfforestReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAfforestReport" />
+  </wsdl:message>
+  <wsdl:message name="GetAfforestReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAfforestReportResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebScheduleSoap">
+    <wsdl:operation name="YZL_PlainGreen">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取绿化造林数据（codeid为null或者空默认取全省数据,year不能为空)</wsdl:documentation>
+      <wsdl:input message="tns:YZL_PlainGreenSoapIn" />
+      <wsdl:output message="tns:YZL_PlainGreenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetAfforest_Foster">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取森林抚育数据（codeid为null或者空默认取全省数据,year不能为空)</wsdl:documentation>
+      <wsdl:input message="tns:YZL_GetAfforest_FosterSoapIn" />
+      <wsdl:output message="tns:YZL_GetAfforest_FosterSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetSBLH">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取四边绿化数据（codeid为null或者空默认取全省数据,year不能为空)</wsdl:documentation>
+      <wsdl:input message="tns:YZL_GetSBLHSoapIn" />
+      <wsdl:output message="tns:YZL_GetSBLHSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetPlainG">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取平原绿化数据（codeid为null或者空默认取全省数据,year不能为空)</wsdl:documentation>
+      <wsdl:input message="tns:YZL_GetPlainGSoapIn" />
+      <wsdl:output message="tns:YZL_GetPlainGSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetZGTree">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取新植珍贵树数据（codeid为null或者空默认取全省数据,year不能为空)</wsdl:documentation>
+      <wsdl:input message="tns:YZL_GetZGTreeSoapIn" />
+      <wsdl:output message="tns:YZL_GetZGTreeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetAfforest_Majorproject">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取防护林数据（codeid为null或者空默认取全省数据,year不能为空)</wsdl:documentation>
+      <wsdl:input message="tns:YZL_GetAfforest_MajorprojectSoapIn" />
+      <wsdl:output message="tns:YZL_GetAfforest_MajorprojectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlainGreenProChartReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取绿化造林进度统计表</wsdl:documentation>
+      <wsdl:input message="tns:GetPlainGreenProChartReportSoapIn" />
+      <wsdl:output message="tns:GetPlainGreenProChartReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforest_FosterChartReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取森林抚育统计表(type为省级、县级或市级)</wsdl:documentation>
+      <wsdl:input message="tns:GetAfforest_FosterChartReportSoapIn" />
+      <wsdl:output message="tns:GetAfforest_FosterChartReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSBLHReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取四边绿化统计表</wsdl:documentation>
+      <wsdl:input message="tns:GetSBLHReportSoapIn" />
+      <wsdl:output message="tns:GetSBLHReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlainGChartReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取平原绿化统计表</wsdl:documentation>
+      <wsdl:input message="tns:GetPlainGChartReportSoapIn" />
+      <wsdl:output message="tns:GetPlainGChartReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetZGTreeReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取珍贵树种统计表(typeTime:年或月)</wsdl:documentation>
+      <wsdl:input message="tns:GetZGTreeReportSoapIn" />
+      <wsdl:output message="tns:GetZGTreeReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforest_MajorprojectChartReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取防护林工程统计表</wsdl:documentation>
+      <wsdl:input message="tns:GetAfforest_MajorprojectChartReportSoapIn" />
+      <wsdl:output message="tns:GetAfforest_MajorprojectChartReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforest">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取造林表数据 （参数codeid 行政代码 参数year 年份 参数type ：1,2,3，...7   例：GetAfforest("331181","2017","1")  1人工造林，2平原绿化，3封山育林，4生态防火,5抚育改造,6专项造林,7其它造林）</wsdl:documentation>
+      <wsdl:input message="tns:GetAfforestSoapIn" />
+      <wsdl:output message="tns:GetAfforestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforestDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取造林明细表数据 （参数codeid 行政代码 参数year 年份 参数type ：1,2,3，...7   例：GetAfforestDetail("331181","2017","1")  1人工造林，2平原绿化，3封山育林，4生态防火,5抚育改造,6专项造林,7其它造林） AfforestNo字段是造林表的no的外键</wsdl:documentation>
+      <wsdl:input message="tns:GetAfforestDetailSoapIn" />
+      <wsdl:output message="tns:GetAfforestDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforestCheckReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取造林验收一览表数据 （参数codeid 行政代码 参数year 年份 参数type ：1,2,3，...7   例：GetAfforestCheckReport("331181","2017","1")  1人工造林，2平原绿化，3封山育林，4生态防火,5抚育改造,6专项造林,7其它造林）</wsdl:documentation>
+      <wsdl:input message="tns:GetAfforestCheckReportSoapIn" />
+      <wsdl:output message="tns:GetAfforestCheckReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforestReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取造林设计一览表数据 （参数codeid 行政代码 参数year 年份 参数type ：1,2,3，...7   例：GetAfforestReport("331181","2017","1")  1人工造林，2平原绿化，3封山育林，4生态防火,5抚育改造,6专项造林,7其它造林）</wsdl:documentation>
+      <wsdl:input message="tns:GetAfforestReportSoapIn" />
+      <wsdl:output message="tns:GetAfforestReportSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebScheduleSoap" type="tns:WebScheduleSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="YZL_PlainGreen">
+      <soap:operation soapAction="http://tempuri.org/YZL_PlainGreen" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetAfforest_Foster">
+      <soap:operation soapAction="http://tempuri.org/YZL_GetAfforest_Foster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetSBLH">
+      <soap:operation soapAction="http://tempuri.org/YZL_GetSBLH" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetPlainG">
+      <soap:operation soapAction="http://tempuri.org/YZL_GetPlainG" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetZGTree">
+      <soap:operation soapAction="http://tempuri.org/YZL_GetZGTree" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetAfforest_Majorproject">
+      <soap:operation soapAction="http://tempuri.org/YZL_GetAfforest_Majorproject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlainGreenProChartReport">
+      <soap:operation soapAction="http://tempuri.org/GetPlainGreenProChartReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforest_FosterChartReport">
+      <soap:operation soapAction="http://tempuri.org/GetAfforest_FosterChartReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSBLHReport">
+      <soap:operation soapAction="http://tempuri.org/GetSBLHReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlainGChartReport">
+      <soap:operation soapAction="http://tempuri.org/GetPlainGChartReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZGTreeReport">
+      <soap:operation soapAction="http://tempuri.org/GetZGTreeReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforest_MajorprojectChartReport">
+      <soap:operation soapAction="http://tempuri.org/GetAfforest_MajorprojectChartReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforest">
+      <soap:operation soapAction="http://tempuri.org/GetAfforest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforestDetail">
+      <soap:operation soapAction="http://tempuri.org/GetAfforestDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforestCheckReport">
+      <soap:operation soapAction="http://tempuri.org/GetAfforestCheckReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforestReport">
+      <soap:operation soapAction="http://tempuri.org/GetAfforestReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebScheduleSoap12" type="tns:WebScheduleSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="YZL_PlainGreen">
+      <soap12:operation soapAction="http://tempuri.org/YZL_PlainGreen" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetAfforest_Foster">
+      <soap12:operation soapAction="http://tempuri.org/YZL_GetAfforest_Foster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetSBLH">
+      <soap12:operation soapAction="http://tempuri.org/YZL_GetSBLH" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetPlainG">
+      <soap12:operation soapAction="http://tempuri.org/YZL_GetPlainG" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetZGTree">
+      <soap12:operation soapAction="http://tempuri.org/YZL_GetZGTree" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="YZL_GetAfforest_Majorproject">
+      <soap12:operation soapAction="http://tempuri.org/YZL_GetAfforest_Majorproject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlainGreenProChartReport">
+      <soap12:operation soapAction="http://tempuri.org/GetPlainGreenProChartReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforest_FosterChartReport">
+      <soap12:operation soapAction="http://tempuri.org/GetAfforest_FosterChartReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSBLHReport">
+      <soap12:operation soapAction="http://tempuri.org/GetSBLHReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlainGChartReport">
+      <soap12:operation soapAction="http://tempuri.org/GetPlainGChartReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetZGTreeReport">
+      <soap12:operation soapAction="http://tempuri.org/GetZGTreeReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforest_MajorprojectChartReport">
+      <soap12:operation soapAction="http://tempuri.org/GetAfforest_MajorprojectChartReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforest">
+      <soap12:operation soapAction="http://tempuri.org/GetAfforest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforestDetail">
+      <soap12:operation soapAction="http://tempuri.org/GetAfforestDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforestCheckReport">
+      <soap12:operation soapAction="http://tempuri.org/GetAfforestCheckReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAfforestReport">
+      <soap12:operation soapAction="http://tempuri.org/GetAfforestReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebSchedule">
+    <wsdl:port name="WebScheduleSoap" binding="tns:WebScheduleSoap">
+      <soap:address location="http://122.224.142.235/yzlnew/WebSchedule.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebScheduleSoap12" binding="tns:WebScheduleSoap12">
+      <soap12:address location="http://122.224.142.235/yzlnew/WebSchedule.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

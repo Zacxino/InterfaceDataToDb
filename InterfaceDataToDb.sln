@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceDataToDb", "InterfaceDataToDb\InterfaceDataToDb.csproj", "{402B478A-A271-4E0E-8886-D09BBBE6D3BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{402B478A-A271-4E0E-8886-D09BBBE6D3BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{402B478A-A271-4E0E-8886-D09BBBE6D3BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{402B478A-A271-4E0E-8886-D09BBBE6D3BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{402B478A-A271-4E0E-8886-D09BBBE6D3BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {603CF809-1E84-4BAF-84DC-6602C2B46C40}
+	EndGlobalSection
+EndGlobal
