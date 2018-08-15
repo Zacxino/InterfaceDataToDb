@@ -981,8 +981,8 @@ namespace InterfaceDataToDb
         {
             //var list = Dd.YzUP("admin", "Admin@#!");
 
-            int min = 4500;
-            int max = 4800;
+            int min = 21000;
+            int max = 21500;
             List<string> sqllist = new List<string>();
             StringBuilder sb = new StringBuilder();
             sb.AppendFormat("select ApplicationId from National_Application where ID <= {0} and ID>{1} order by id ", max, min);
@@ -1042,5 +1042,7 @@ namespace InterfaceDataToDb
                 //throw;
             }
         }
+
+        
     }
 }
