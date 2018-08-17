@@ -26,7 +26,7 @@ namespace InterfaceDataToDb
             //var list = JObject.Parse(ldzz.Ldzz_XmlbByXzqh("330100", Convert.ToDateTime("2011-01-01"), Convert.ToDateTime("2011-12-31")));
             //var num = list["result"].Count();
             //var num1 = obj["result"].Count();
-            this.button1.Enabled = false;
+            this.button1.Enabled = true;
             this.button2.Enabled = false;
             this.lhzl.Enabled = false;
             this.SLFY.Enabled = false; //从2016起有数据
@@ -36,6 +36,8 @@ namespace InterfaceDataToDb
             this.FHL.Enabled = false;
             this.DE.Enabled = false;
             this.Tjxmgs.Enabled = false;
+            this.DJBDetail.Enabled = false;
+            this.OldtoNew.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -995,7 +997,7 @@ namespace InterfaceDataToDb
 
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                var applicationid = dt.Rows[i]["ApplicationId"].ToString(); 
+                var applicationid = dt.Rows[i]["ApplicationId"].ToString();
                 var list = JObject.Parse(ldzz.Ldzz_DjbByCode(applicationid));
 
                 if (list["success"].ToString().ToLower() == "true")
@@ -1043,6 +1045,128 @@ namespace InterfaceDataToDb
             }
         }
 
-        
+        private void OldtoNew_Click(object sender, EventArgs e)
+        {
+            StringBuilder strSql = new StringBuilder();
+            List<string> sqllist = new List<string>();
+            strSql.Append(" select DQCODE, DQGRADE, DQPARERENT, DQNAME");
+            strSql.Append("   from  BS_DQ ");
+            strSql.AppendFormat("  where DQPARERENT = '{0}'", "330000");
+            strSql.Append("  order by DQID ");
+            DataTable dt = DbHelperSQL.Query(strSql.ToString()).Tables[0];
+
+            StringBuilder str = new StringBuilder();
+            str.Append("insert into AdministrativeDivisions (");
+            str.Append("Id,Code,Name,[Level],ValidDate,InValidDate,ParentADId,SourceDId)");
+
+            Guid id = Guid.NewGuid();
+            var ValidDate = DateTime.Parse("1900-1-1");
+            var InValidDate = DateTime.Parse("9999-12-31");
+
+            str.AppendFormat(" select '{0}'", id);
+            str.AppendFormat(",'{0}'", "330000");
+            str.AppendFormat(",'{0}'", "浙江省");
+            str.AppendFormat(",'{0}'", "2");
+            str.AppendFormat(",'{0}'", ValidDate);
+            str.AppendFormat(",'{0}'", InValidDate);
+            str.Append(", null");
+            str.Append(", null");
+            str.AppendFormat(" UNION ALL ");
+            foreach (DataRow item in dt.Rows)
+            {
+                Guid subid = Guid.NewGuid();
+                str.AppendFormat(" select '{0}'", subid);
+                str.AppendFormat(",'{0}'", item["DQCODE"].ToString());
+                str.AppendFormat(",'{0}'", item["DQNAME"].ToString());
+                str.AppendFormat(",'{0}'", item["DQGRADE"].ToString());
+                str.AppendFormat(",'{0}'", ValidDate);
+                str.AppendFormat(",'{0}'", InValidDate);
+                str.AppendFormat(",'{0}'", id);
+                str.Append(", null");
+                str.AppendFormat(" UNION ALL ");
+
+                var dqparent = item["DQCODE"].ToString();
+                strSql.Clear();
+                strSql.Append(" select DQCODE, DQGRADE, DQPARERENT, DQNAME");
+                strSql.Append("   from  BS_DQ ");
+                strSql.AppendFormat("  where DQPARERENT = '{0}'", dqparent);
+                strSql.Append("  order by DQID ");
+                DataTable dataTable = DbHelperSQL.Query(strSql.ToString()).Tables[0];
+
+                
+                foreach (DataRow subitme in dataTable.Rows)
+                {
+                    Guid ssubid = Guid.NewGuid();
+                    str.AppendFormat(" select '{0}'", ssubid);
+                    str.AppendFormat(",'{0}'", subitme["DQCODE"].ToString());
+                    str.AppendFormat(",'{0}'", subitme["DQNAME"].ToString());
+                    str.AppendFormat(",'{0}'", subitme["DQGRADE"].ToString());
+                    str.AppendFormat(",'{0}'", ValidDate);
+                    str.AppendFormat(",'{0}'", InValidDate);
+                    str.AppendFormat(",'{0}'", subid);
+                    str.Append(", null");
+                    str.AppendFormat(" UNION ALL ");
+                    createsql(str, subitme["DQCODE"].ToString(), ssubid);
+                }
+            }
+
+            string insertStr = str.ToString();
+            if (insertStr.Contains(" UNION ALL "))
+            {
+                insertStr = insertStr.Substring(0, insertStr.Length - 10);
+                sqllist.Add(insertStr);
+            }
+            try
+            {
+                //DbHelperSQL.ExecuteSqlTran(sqllist);
+               // MessageBox.Show("入库成功！");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("入库失败！");
+                //throw;
+            }
+        }
+
+        public StringBuilder createsql(StringBuilder str,string dqcode,Guid id)
+        {
+            string sql = string.Format("select * from BS_DQ where DQPARERENT = '{0}' order by DQID", dqcode);
+            DataTable dataTable = DbHelperSQL.Query(sql.ToString()).Tables[0];
+            var ValidDate = DateTime.Parse("1900-1-1");
+            var InValidDate = DateTime.Parse("9999-12-31");
+            foreach (DataRow item in dataTable.Rows)
+            {
+                Guid subid = Guid.NewGuid();
+                str.AppendFormat(" select '{0}'", subid);
+                str.AppendFormat(",'{0}'", item["DQCODE"].ToString());
+                str.AppendFormat(",'{0}'", item["DQNAME"].ToString());
+                str.AppendFormat(",'{0}'", item["DQGRADE"].ToString());
+                str.AppendFormat(",'{0}'", ValidDate);
+                str.AppendFormat(",'{0}'", InValidDate);
+                str.AppendFormat(",'{0}'", id);
+                str.Append(", null");
+                str.AppendFormat(" UNION ALL ");
+
+                string sqlsq = string.Format("select * from BS_DQ where DQPARERENT = '{0}' order by DQID", item["DQCODE"].ToString());
+                DataTable dt = DbHelperSQL.Query(sqlsq.ToString()).Tables[0];
+                if (dt.Rows.Count>0)
+                {
+                    foreach (DataRow itsq in dt.Rows)
+                    {
+                        Guid ssubid = Guid.NewGuid();
+                        str.AppendFormat(" select '{0}'", ssubid);
+                        str.AppendFormat(",'{0}'", itsq["DQCODE"].ToString());
+                        str.AppendFormat(",'{0}'", itsq["DQNAME"].ToString());
+                        str.AppendFormat(",'{0}'", itsq["DQGRADE"].ToString());
+                        str.AppendFormat(",'{0}'", ValidDate);
+                        str.AppendFormat(",'{0}'", InValidDate);
+                        str.AppendFormat(",'{0}'", subid);
+                        str.Append(", null");
+                        str.AppendFormat(" UNION ALL ");
+                    }
+                }
+            }
+            return str;
+        }
     }
 }

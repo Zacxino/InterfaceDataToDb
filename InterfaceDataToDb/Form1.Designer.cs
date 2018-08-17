@@ -42,6 +42,7 @@
             this.DE = new System.Windows.Forms.Button();
             this.Tjxmgs = new System.Windows.Forms.Button();
             this.DJBDetail = new System.Windows.Forms.Button();
+            this.OldtoNew = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -180,11 +181,22 @@
             this.DJBDetail.UseVisualStyleBackColor = true;
             this.DJBDetail.Click += new System.EventHandler(this.DJBDetail_Click);
             // 
+            // OldtoNew
+            // 
+            this.OldtoNew.Location = new System.Drawing.Point(489, 102);
+            this.OldtoNew.Name = "OldtoNew";
+            this.OldtoNew.Size = new System.Drawing.Size(100, 23);
+            this.OldtoNew.TabIndex = 14;
+            this.OldtoNew.Text = "行政区划更新";
+            this.OldtoNew.UseVisualStyleBackColor = true;
+            this.OldtoNew.Click += new System.EventHandler(this.OldtoNew_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.OldtoNew);
             this.Controls.Add(this.DJBDetail);
             this.Controls.Add(this.Tjxmgs);
             this.Controls.Add(this.DE);
@@ -222,6 +234,7 @@
         private System.Windows.Forms.Button DE;
         private System.Windows.Forms.Button Tjxmgs;
         private System.Windows.Forms.Button DJBDetail;
+        private System.Windows.Forms.Button OldtoNew;
     }
 }
 
